@@ -1,0 +1,11 @@
+{
+  "label": "Brandon's Optimized Theme",
+  "preview_path": "./templates/home.html",
+  "screenshot_path": "./images/template-previews/home.png",
+  "enable_domain_stylesheets": false,
+  "author": {
+    "name": "Brandon Nkabinde",
+    "email": "brandon@example.com",
+    "url": "https://www.example.com"
+  }
+}

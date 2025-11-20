@@ -1,0 +1,44 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Home
+  screenshotPath: ../images/template-previews/home.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block page_title %}
+  {{ content.html_title }} - Brandon's Optimized Theme
+{% endblock %}
+
+{% block body %}
+  {# Drag and Drop Area with Sections #}
+  {% dnd_area "main_content" 
+    label='Main Content',
+    class='body-container'
+  %}
+    {# Image and Text Section #}
+    {% dnd_section
+      vertical_alignment='MIDDLE'
+    %}
+      {% dnd_module path='@hubspot/rich_text' %}
+        {% module_attribute "html" %}
+          <h2>Welcome to Our Website</h2>
+          <p>This is an optimized HubSpot CMS theme built for performance, accessibility, and SEO.</p>
+        {% end_module_attribute %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+    
+    {# Include Image and Text Section #}
+    {% dnd_section %}
+      {% dnd_module path='../sections/image-text-section' %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+    
+    {# Include Team Members Section #}
+    {% dnd_section %}
+      {% dnd_module path='../sections/team-members-section' %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+    
+  {% end_dnd_area %}
+{% endblock %}

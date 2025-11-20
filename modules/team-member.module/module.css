@@ -1,0 +1,4 @@
+/* Team Member Module Base Styles */
+.team-member-card {
+  transition: transform 0.3s ease;
+}

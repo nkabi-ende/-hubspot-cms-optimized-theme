@@ -1,0 +1,8 @@
+{
+  "label": "Team Member",
+  "host_template_types": ["PAGE"],
+  "icon": "user",
+  "is_available_for_new_content": true,
+  "module_id": 123456,
+  "smart_type": "NOT_SMART"
+}

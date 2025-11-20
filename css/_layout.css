@@ -1,0 +1,68 @@
+/* Drag and Drop Area Layout Styles */
+
+.dnd-section {
+  padding: 60px 20px;
+}
+
+.dnd-section > .row-fluid {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dnd-row,
+.row-fluid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.dnd-column,
+.span12,
+.span6,
+.span4,
+.span3 {
+  position: relative;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.span12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.span6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.span4 {
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+}
+
+.span3 {
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .span6,
+  .span4,
+  .span3 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  
+  .dnd-section {
+    padding: 40px 15px;
+  }
+}
+
+/* Module Wrapper */
+.dnd-module {
+  margin-bottom: 30px;
+}

@@ -1,0 +1,70 @@
+{% set image_width = module.content.image_url.width or 300 %}
+{% set image_height = module.content.image_url.height or 300 %}
+{% set resized_image = resize_image_url(module.content.image_url.src, image_width, image_height) %}
+
+<div class="team-member-card" data-module-id="{{ name }}">
+  <div class="team-member-image">
+    <img 
+      src="{{ resized_image }}"
+      alt="{{ module.content.image_url.alt or module.content.member_name }}"
+      width="{{ image_width }}"
+      height="{{ image_height }}"
+      loading="lazy"
+    >
+  </div>
+  <div class="team-member-info">
+    <h3>{{ module.content.member_name }}</h3>
+    <p class="team-member-role">{{ module.content.role }}</p>
+  </div>
+</div>
+
+{% require_css %}
+  <style>
+    .team-member-card[data-module-id="{{ name }}"] {
+      max-width: 300px;
+      text-align: center;
+      background: #ffffff;
+      padding: 20px;
+      border-style: {{ module.styles.border_style }};
+      border-width: {{ module.styles.border_width }}px;
+      border-color: {{ module.styles.border_color.color }};
+      border-radius: {{ module.styles.border_radius }}px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .team-member-card[data-module-id="{{ name }}"]:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+    
+    .team-member-card[data-module-id="{{ name }}"] .team-member-image {
+      margin-bottom: 20px;
+      overflow: hidden;
+      border-radius: {{ module.styles.border_radius }}px;
+    }
+    
+    .team-member-card[data-module-id="{{ name }}"] img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    .team-member-card[data-module-id="{{ name }}"] h3 {
+      margin-bottom: 8px;
+      font-size: 1.25rem;
+      color: #33475B;
+    }
+    
+    .team-member-card[data-module-id="{{ name }}"] .team-member-role {
+      color: #6c757d;
+      font-size: 0.95rem;
+      margin: 0;
+    }
+    
+    @media (max-width: 767px) {
+      .team-member-card[data-module-id="{{ name }}"] {
+        max-width: 100%;
+      }
+    }
+  </style>
+{% end_require_css %}

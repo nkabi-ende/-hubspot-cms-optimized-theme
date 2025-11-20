@@ -1,0 +1,86 @@
+[
+  {
+    "id": "content",
+    "name": "content",
+    "label": "Content",
+    "type": "group",
+    "children": [
+      {
+        "id": "member_name",
+        "name": "member_name",
+        "label": "Name",
+        "type": "text",
+        "default": "Team Member Name"
+      },
+      {
+        "id": "role",
+        "name": "role",
+        "label": "Role",
+        "type": "text",
+        "default": "Job Title"
+      },
+      {
+        "id": "image_url",
+        "name": "image_url",
+        "label": "Profile Image",
+        "type": "image",
+        "default": {
+          "src": "https://via.placeholder.com/300x300",
+          "alt": "Team member photo",
+          "width": 300,
+          "height": 300
+        }
+      }
+    ]
+  },
+  {
+    "id": "styles",
+    "name": "styles",
+    "label": "Styles",
+    "type": "group",
+    "children": [
+      {
+        "id": "border_style",
+        "name": "border_style",
+        "label": "Border Style",
+        "type": "choice",
+        "choices": [
+          ["none", "None"],
+          ["solid", "Solid"],
+          ["dashed", "Dashed"],
+          ["dotted", "Dotted"]
+        ],
+        "default": "solid"
+      },
+      {
+        "id": "border_width",
+        "name": "border_width",
+        "label": "Border Width",
+        "type": "number",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "default": 2
+      },
+      {
+        "id": "border_color",
+        "name": "border_color",
+        "label": "Border Color",
+        "type": "color",
+        "default": {
+          "color": "#E0E0E0"
+        }
+      },
+      {
+        "id": "border_radius",
+        "name": "border_radius",
+        "label": "Border Radius (px)",
+        "type": "number",
+        "min": 0,
+        "max": 50,
+        "step": 5,
+        "default": 10
+      }
+    ]
+  }
+]

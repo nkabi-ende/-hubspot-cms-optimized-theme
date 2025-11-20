@@ -1,0 +1,71 @@
+[
+  {
+    "id": "colors",
+    "name": "colors",
+    "label": "Colors",
+    "type": "group",
+    "children": [
+      {
+        "id": "primary_color",
+        "name": "primary_color",
+        "label": "Primary Color",
+        "type": "color",
+        "default": {
+          "color": "#FF7A59"
+        }
+      },
+      {
+        "id": "secondary_color",
+        "name": "secondary_color",
+        "label": "Secondary Color",
+        "type": "color",
+        "default": {
+          "color": "#425B76"
+        }
+      },
+      {
+        "id": "text_color",
+        "name": "text_color",
+        "label": "Text Color",
+        "type": "color",
+        "default": {
+          "color": "#33475B"
+        }
+      }
+    ]
+  },
+  {
+    "id": "header",
+    "name": "header",
+    "label": "Header",
+    "type": "group",
+    "children": [
+      {
+        "id": "header_bg_color",
+        "name": "header_bg_color",
+        "label": "Header Background Color",
+        "type": "color",
+        "default": {
+          "color": "#FFFFFF"
+        }
+      }
+    ]
+  },
+  {
+    "id": "footer",
+    "name": "footer",
+    "label": "Footer",
+    "type": "group",
+    "children": [
+      {
+        "id": "footer_bg_color",
+        "name": "footer_bg_color",
+        "label": "Footer Background Color",
+        "type": "color",
+        "default": {
+          "color": "#F5F8FA"
+        }
+      }
+    ]
+  }
+]
